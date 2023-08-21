@@ -26,7 +26,9 @@ $(function(){
             data: {
                 name: name
             }
-        });
+        }).done(function(res){
+            $('.Create').val().empty()
+        })
     })
 
     $('#delete a').on('click',function(){
@@ -43,6 +45,7 @@ $(function(){
             res.forEach(function(user){
                 console.log(user)
             });
+            $('.Delete').val().empty()
         })
         .fail(function(err){
             console.log(err)
@@ -60,6 +63,8 @@ $(function(){
             data:{
                 name: name
             }
-        });
+        }).done(function(res){
+            $('.Update').val().empty()
+        })
     })
 })
