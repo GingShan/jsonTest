@@ -1,7 +1,7 @@
 $(function(){
     $.ajax({
-        method: "GET",
-        url: "http://localhost:3000/users",
+        method: "get",
+        url: "https://gingshan.github.io/jsonTest/data/data.json",
         dataType: "json",
         data: {
         },
@@ -21,7 +21,7 @@ $(function(){
         if (!name) return false
         $.ajax({
             method: "post",
-            url: "http://localhost:3000/users",
+            url: "https://gingshan.github.io/jsonTest/data/data.json",
             dataType: "json",
             data: {
                 name: name
@@ -34,7 +34,7 @@ $(function(){
         if (!id) return false
         $.ajax({
             method: "delete",
-            url: "http://localhost:3000/users/" + id,
+            url: "https://gingshan.github.io/jsonTest/data/data.json/" + id,
             dataType: "json",
 
         }).done(function(res){
@@ -55,7 +55,7 @@ $(function(){
         if (!name) return false
         $.ajax({
             method: "put",
-            url: "http://localhost:3000/users/" + id,
+            url: "https://gingshan.github.io/jsonTest/data/data.json/" + id,
             dataType: "json",
             data:{
                 name: name
